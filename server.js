@@ -20,6 +20,10 @@ app.locals = {
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('fitlit api')
+});
+
 app.get('/api/v1/users', (req, res) => {
   res.status(200).json({ users: app.locals.users });
 });
